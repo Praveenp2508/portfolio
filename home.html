@@ -35,15 +35,46 @@
             .link{padding: 20px;}
             .link a{padding: 20px;}
             .link img:hover{ background-color: aqua; transform: scale3d(1.5,1.5,3); transition: 0.5s;}
+            .typewriter h2 {
+            font-family:'Courier New', Courier, monospace;
+            font-size: 30px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: .15em solid black;
+            -webkit-animation: typing 2s steps(26, end), blink-caret 1s step-end infinite;
+            -webkit-animation-delay: 0s;
+            -webkit-animation-fill-mode: both;
+            -moz-animation: typing 2s steps(26, end), blink-caret 1s step-end infinite;
+            -moz-animation-delay: 3s;}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+  to {
+    width: 65%;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent
+  }
+  50% {
+    border-color: #f7a40b;
+  }
+}
         
-        </style>
+    </style>
 
     </head>
 <body>
     <div class="content">
         <div class="head">
             <h1>Praveen P</h1>
-            <h2>I'm a Developer</h2>
+            <div class="typewriter">
+                <h2>I'm a Developer</h2>
+              </div>
+            
         </div>
         <div class="image">
             <img src="profile.JPG">
