@@ -7,7 +7,7 @@
     <style>
         body {
             padding: 80px 200px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background-color: #c3cfe2; 
             font-family: 'Poppins', sans-serif;
             margin: 0;
             transition: 0.3s;
@@ -95,7 +95,7 @@
             white-space: nowrap;
             overflow: hidden;
             border-right: .15em solid black;
-            animation: typing 2s steps(26, end), blink-caret 1s step-end infinite;
+            animation: typing 10s steps(30, end), delete 2s steps(30, end) 4s, blink-caret 10s step-end infinite;
         }
 
         @keyframes typing {
@@ -104,7 +104,17 @@
             }
 
             to {
-                width: 100%;
+                width: 68%;
+            }
+        }
+
+        @keyframes delete {
+            from {
+                width: 68%;
+            }
+
+            to {
+                width: 0;
             }
         }
 
@@ -115,8 +125,14 @@
             }
 
             50% {
-                border-color: #f7a40b;
+                border-color: rgb(250, 145, 48);
             }
+        }
+
+        /* Ensuring it loops continuously */
+        .typewriter h2 {
+            animation: typing 4s steps(30, end), delete 2s steps(30, end) 4s, blink-caret 1s step-end infinite;
+            animation-iteration-count: infinite;
         }
 
         .nav {
