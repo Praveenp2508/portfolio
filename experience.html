@@ -1,55 +1,151 @@
-<html></html>
-    <head>
-        <style>
-            body{padding: 10px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praveen P</title>
+    <style>
+        body {
+            padding: 10px;
+            background-color: #c3cfe2; 
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-            .nav{display: flex;
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
             padding: 20px;
-            justify-content: space-evenly;
+            justify-content: space-between;
             background: radial-gradient(circle at 10% 20%, rgb(166, 226, 229) 0%, rgb(198, 232, 221) 100.2%);
             position: -webkit-sticky;
             position: sticky;
-            top: 1;}
+            top: 0;
+            z-index: 1000;
+        }
 
-            h3{font-size: 30px;
+        .nav .name h3 {
+            margin: 0;
+            font-size: 24px;
             font-weight: 700;
-            font-family:'Poppins',sans-serif;}
+            font-family: 'Poppins', sans-serif;
+        }
 
-            .navcontent ul{list-style-type: none;
-            display: flex;}
-            
-            .navcontent li{padding: 20px;
-            font-size: 20px;
-            font-family: 'Poppins',sans-serif;}
+        .navcontent ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+        }
 
-            .navcontent li:hover{color: aqua; background-color: black; border-radius: 50px;}
+        .navcontent li {
+            padding: 10px;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+        }
 
-            .navcontent li a{text-decoration: none;
-            color: black;}
+        .navcontent li:hover {
+            color: aqua;
+            background-color: black;
+            border-radius: 50px;
+        }
 
-            .navcontent li:hover a{color: aqua;}
-            h1{font-size: 30px;
-            padding-left: 30px;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
-            .cantainer{box-shadow: 2px 3px 7px;
-            padding: 30px;
-        background-color: #041932;
-    color: #f5f7fa;
-border-radius: 10px;}
-            .cantainer h2{font-family: 'Poppins',sans-serif ;
-            padding-left: 30px;
-            font-size: 30px;
-        color: rgb(71, 234, 71);}
-            .cantainer p{text-align: justify;
-            padding-left: 100px;
-            font-size: 20px;}
-            
-            .cantainer:hover{background-color: #042E5F; transition: 1s;}
+        .navcontent li a {
+            text-decoration: none;
+            color: black;
+        }
 
-            
-        </style>
-    </head>
+        .navcontent li:hover a {
+            color: aqua;
+        }
+
+        h1 {
+            font-size: 24px;
+            padding-left: 10px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .cantainer {
+            box-shadow: 2px 3px 7px;
+            padding: 20px;
+            background-color: #041932;
+            color: #f5f7fa;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .cantainer h2 {
+            font-family: 'Poppins', sans-serif;
+            padding-left: 10px;
+            font-size: 24px;
+            color: rgb(71, 234, 71);
+        }
+
+        .cantainer p {
+            text-align: justify;
+            padding-left: 10px;
+            font-size: 16px;
+        }
+
+        .cantainer:hover {
+            background-color: #042E5F;
+            transition: 1s;
+        }
+
+        @media (max-width: 768px) {
+            .navcontent li {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            h1 {
+                font-size: 20px;
+                padding-left: 5px;
+            }
+
+            .cantainer {
+                padding: 15px;
+            }
+
+            .cantainer h2 {
+                font-size: 20px;
+                padding-left: 5px;
+            }
+
+            .cantainer p {
+                font-size: 14px;
+                padding-left: 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navcontent li {
+                font-size: 12px;
+                padding: 5px;
+            }
+
+            h1 {
+                font-size: 18px;
+                padding-left: 5px;
+            }
+
+            .cantainer {
+                padding: 10px;
+            }
+
+            .cantainer h2 {
+                font-size: 18px;
+                padding-left: 5px;
+            }
+
+            .cantainer p {
+                font-size: 12px;
+                padding-left: 5px;
+            }
+        }
+    </style>
+</head>
 <body>
     <div class="nav">
         <div class="name">
@@ -58,14 +154,14 @@ border-radius: 10px;}
 
         <div class="navcontent">
             <ul>
-              <li><a href="home.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="education.html">Education</a></li>
-              <li><a href="experience.html">Experience</a></li>
-              <li><a href="project.html">Project</a></li>
-              <li><a href="skill.html">Skill</a></li>
-              <li><a href="praveen resume.pdf"> Resume </a></li>
-              <li><a href="contact.html">Contact</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="skill.html">Skill</a></li>
+                <li><a href="praveen resume.pdf"> Resume </a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -73,7 +169,7 @@ border-radius: 10px;}
     <h1>EXPERIENCE___</h1>
     <div class="cantainer">
         <h2>Fresher</h2>
-        <p>Open to Opportunities As a recent graduate eager to kickstart a career in software development, I am enthusiastically seeking opportunities to apply my skills and knowledge in a dynamic professional setting. With a solid foundation in software engineering principles, algorithms, and web development gained through coursework and hands-on projects, I am prepared to contribute effectively to innovative projects and initiatives. I am adaptable, quick to learn new technologies, and thrive in collaborative environments where I can leverage my problem-solving abilities and passion for creating impactful solutions. I am committed to continuous growth and excited about the prospect of contributing to the success of a reputable organization in the software industry</p>
+        <p>Open to Opportunities As a recent graduate eager to kickstart a career in software development, I am enthusiastically seeking opportunities to apply my skills and knowledge in a dynamic professional setting. With a solid foundation in software engineering principles, algorithms, and web development gained through coursework and hands-on projects, I am prepared to contribute effectively to innovative projects and initiatives. I am adaptable, quick to learn new technologies, and thrive in collaborative environments where I can leverage my problem-solving abilities and passion for creating impactful solutions. I am committed to continuous growth and excited about the prospect of contributing to the success of a reputable organization in the software industry.</p>
     </div>
 </body>
 </html>
