@@ -91,11 +91,11 @@
 
         .typewriter h2 {
             font-family: 'Courier New', Courier, monospace;
-            font-size: 30px;
+            font-size: 28px;
             white-space: nowrap;
             overflow: hidden;
             border-right: .15em solid black;
-            animation: typing 10s steps(30, end), delete 2s steps(30, end) 4s, blink-caret 10s step-end infinite;
+            animation: typing  infinite steps(40, end), delete 2s steps(40, end) 4s, blink-caret 1s step-end infinite;
         }
 
         @keyframes typing {
@@ -104,13 +104,13 @@
             }
 
             to {
-                width: 68%;
+                width: 100%;
             }
         }
 
         @keyframes delete {
             from {
-                width: 68%;
+                width: 100%;
             }
 
             to {
@@ -131,7 +131,7 @@
 
         /* Ensuring it loops continuously */
         .typewriter h2 {
-            animation: typing 4s steps(30, end), delete 2s steps(30, end) 4s, blink-caret 1s step-end infinite;
+            animation: typing 4s steps(40, end), delete 2s steps(40, end) 4s, blink-caret 1s step-end infinite;
             animation-iteration-count: infinite;
         }
 
@@ -264,7 +264,7 @@
         <div class="head">
             <h1>Praveen P</h1>
             <div class="typewriter">
-                <h2>I'm a Developer</h2>
+                <h2>I'm a Software Developer</h2>
             </div>
         </div>
         <div class="image">
