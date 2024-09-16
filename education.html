@@ -1,64 +1,191 @@
-<html></html>
-    <head>
-        <style>
-            body{padding: 10px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praveen P</title>
+    <style>
+        body {
+            padding: 10px;
+            background-color: #c3cfe2; 
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-            .nav{display: flex;
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
             padding: 20px;
-            justify-content: space-evenly;
+            justify-content: space-between;
             background: radial-gradient(circle at 10% 20%, rgb(166, 226, 229) 0%, rgb(198, 232, 221) 100.2%);
             position: -webkit-sticky;
             position: sticky;
-            top: 1;}
+            top: 0;
+            z-index: 1000;
+        }
 
-            h3{font-size: 30px;
+        .nav .name h3 {
+            margin: 0;
+            font-size: 24px;
             font-weight: 700;
-            font-family:'Poppins',sans-serif;}
+            font-family: 'Poppins', sans-serif;
+        }
 
-            .navcontent ul{list-style-type: none;
-            display: flex;}
-            
-            .navcontent li{padding: 20px;
-            font-size: 20px;
-            font-family: 'Poppins',sans-serif;}
+        .navcontent ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+        }
 
-            .navcontent li:hover{color: aqua; background-color: black; border-radius: 50px;}
+        .navcontent li {
+            padding: 10px;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+        }
 
-            .navcontent li a{text-decoration: none;
-            color: black;}
+        .navcontent li:hover {
+            color: aqua;
+            background-color: black;
+            border-radius: 50px;
+        }
 
-            .navcontent li:hover a{color: aqua;}
+        .navcontent li a {
+            text-decoration: none;
+            color: black;
+        }
 
-            .content{display: flex;
-            justify-content: space-evenly;}
+        .navcontent li:hover a {
+            color: aqua;
+        }
 
-            .content img{width: 350px;
-            height: 250px;
-        border: 1px solid black;
-      border-radius: 10px;}
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
 
-            .content h6{text-align: center;
-            font-size: 15px;
-        color: white;}
-            .card{box-shadow: 2px 3px 8px;
+        .content .card {
+            box-shadow: 2px 3px 8px;
             background-color: #041932;
-            border-radius: 10px;}
-            .card:hover{background-color: #042E5F; color: #042E5F; transition: 1s;}
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px;
+            flex: 1 1 calc(50% - 20px); /* Two cards per row */
+        }
 
-            .icon-box{background: radial-gradient(circle at 10% 20%, rgb(166, 226, 229) 0%, rgb(198, 232, 221) 100.2%); padding-left: 30px; width: 250px;}
+        .content img {
+            width: 100%;
+            height: 400px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
 
-            .icon-box h3{font-size: 20px;
-            padding: 5px;}
+        .content h6 {
+            text-align: center;
+            font-size: 15px;
+            color: white;
+            padding: 10px;
+        }
 
-            .icon-box:hover{background:radial-gradient( circle at 10% 20%,rgb(198, 232, 221) 0%, rgb(166, 226, 229) 100.6%);}
+        .card:hover {
+            background-color: #042E5F;
+            color: #042E5F;
+            transition: 1s;
+        }
 
-            .icon-box a{text-decoration: none; color: black;}
-            .row{padding-left: 150px;}
+        .icon-box {
+            background: radial-gradient(circle at 10% 20%, rgb(166, 226, 229) 0%, rgb(198, 232, 221) 100.2%);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 10px;
+            text-align: center;
+            flex: 1 1 calc(50% - 20px); /* Two boxes per row */
+        }
 
-            
-        </style>
-    </head>
+        .icon-box h3 {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .icon-box a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .icon-box:hover {
+            background: radial-gradient(circle at 10% 20%, rgb(198, 232, 221) 0%, rgb(166, 226, 229) 100.6%);
+        }
+
+        .section-title h2 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding-left: 20px;
+            font-size: 24px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding-left: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .navcontent li {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .content .card {
+                flex: 1 1 100%;
+                margin: 10px 0;
+            }
+
+            .icon-box {
+                flex: 1 1 100%;
+                margin: 10px 0;
+            }
+
+            .section-title h2 {
+                font-size: 20px;
+                padding-left: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navcontent li {
+                font-size: 12px;
+                padding: 5px;
+            }
+
+            .content img {
+                width: 100%;
+                height: auto;
+            }
+
+            .content h6 {
+                font-size: 12px;
+                padding: 5px;
+            }
+
+            .icon-box h3 {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .section-title h2 {
+                font-size: 18px;
+                padding-left: 5px;
+            }
+        }
+    </style>
+</head>
 <body>
     <div class="nav">
         <div class="name">
@@ -78,30 +205,30 @@
             </ul>
         </div>
     </div>
-    <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; padding-left: 50px;">EDUCATION___</h2><br>
+
+    <h2 class="section-title">EDUCATION___</h2><br>
     <div class="content">
         <div class="card">
-            <img src="collage.png" alt="">
-            <div class="cantainer">
-                <h6>Periyar maniammai institude of <br>science and technology<br>
-                    MASTER OF SCIENCE<br>                                                                                                                                                                 
+            <img src="collage.png" alt="Educational Institute">
+            <div class="container">
+                <h6>Periyar Maniammai Institute of Science and Technology<br>
+                    MASTER OF SCIENCE<br>
                     M.SC COMPUTER SCIENCE<br>
                     2022-2024<br><br>
-                    Periyar maniammai institude of <br> science and technology<br>
-                    BACHELOR OF SCIENCE<br>       
+                    Periyar Maniammai Institute of Science and Technology<br>
+                    BACHELOR OF SCIENCE<br>
                     B.SC COMPUTER SCIENCE<br>
                     2019-2022</h6>
             </div>
-            
         </div>
         <div class="card">
-            <img src="school.png" alt="">
-            <div class="cantainer">
-                <h6>HSC<br>           
-                    Don bosco matriculation higher secondary school<br>                                                                            
+            <img src="school.png" alt="School">
+            <div class="container">
+                <h6>HSC<br>
+                    Don Bosco Matriculation Higher Secondary School<br>
                     2018-2019<br><br>
-                    SSLC<br>        
-                    Don bosco matriculation higher secondary school<br>                                                                   
+                    SSLC<br>
+                    Don Bosco Matriculation Higher Secondary School<br>
                     2016-2017</h6>
             </div>
         </div>
@@ -109,38 +236,38 @@
 
     <br><br><br>
 
-    
     <div class="education">
-
         <div class="section-title">
-          <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; padding-left: 50px;">ACHIEVEMENTS___</h2>
+            <h2>ACHIEVEMENTS___</h2>
         </div><br>
   
         <div class="row">
-          <div class="col-lg-3 col-md-4">
-            <div class="icon-box">
-              <h3><a href="PRAVEEN. P YOUR CERTIFICATE IS READY.pdf">Webinars - Artificial Intelligence</a></h3>
+            <div class="col-lg-3 col-md-4">
+                <div class="icon-box">
+                    <h3><a href="PRAVEEN. P YOUR CERTIFICATE IS READY.pdf">Webinars - Artificial Intelligence</a></h3>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div class="icon-box">
-              <h3><a href="Praveen .pdf">Great learning - Operation management </a></h3>
+            <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+                <div class="icon-box">
+                    <h3><a href="Praveen .pdf">Great Learning - Operation Management</a></h3>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div class="icon-box">
-              <h3><a href="Praveen P 2.pdf">Great learning - Analytics in Finance </a></h3>
+            <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+                <div class="icon-box">
+                    <h3><a href="Praveen P 2.pdf">Great Learning - Analytics in Finance</a></h3>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-            <div class="icon-box">
-              <h3><a href="Praveen P 2.pdf">Great learning - blockchain Process</a></h3>
+            <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+                <div class="icon-box">
+                    <h3><a href="Praveen P 2.pdf">Great Learning - Blockchain Process</a></h3>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-            <div class="icon-box">
-              <h3><a href="GuviCertification - 66Z5253fL161uSk45J.png">Game development using pygame</a></h3>
+            <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+                <div class="icon-box">
+                    <h3><a href="GuviCertification - 66Z5253fL161uSk45J.png">Game Development Using Pygame</a></h3>
+                </div>
             </div>
-          </div>
         </div>
     </div>
+</body>
+</html>
