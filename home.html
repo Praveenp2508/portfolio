@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            padding-left: 200px;
-            padding-top: 80px;
+            padding: 80px 200px;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -29,9 +28,8 @@
 
         ul {
             list-style-type: none;
-            display: flex;
             padding: 0;
-            flex-wrap: wrap;
+            margin: 0;
         }
 
         li {
@@ -58,7 +56,6 @@
 
         .content {
             display: flex;
-            flex-direction: row;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
@@ -70,7 +67,7 @@
         }
 
         .image {
-            margin: 20px 50px;
+            margin: 20px;
         }
 
         .link {
@@ -124,20 +121,70 @@
 
         .nav {
             background: radial-gradient(circle at 10% 20%, rgb(166, 226, 229) 0%, rgb(198, 232, 221) 100.2%);
-            width: 100%;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
         }
 
-        @media only screen and (max-width: 768px) {
+        /* Hamburger menu */
+        .menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu div {
+            width: 30px;
+            height: 4px;
+            background-color: black;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        /* Hidden navigation for small screens */
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .nav-links.active {
+            display: block;
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 1024px) {
             body {
-                padding-left: 50px;
-                padding-top: 20px;
+                padding: 50px 100px;
             }
 
             h1 {
-                font-size: 50px;
+                font-size: 70px;
+            }
+
+            h2 {
+                font-size: 30px;
+            }
+
+            .content img {
+                width: 150px;
+            }
+
+            .image img {
+                width: 150px;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            body {
+                padding: 50px;
+            }
+
+            h1 {
+                font-size: 60px;
             }
 
             h2 {
@@ -145,33 +192,31 @@
             }
 
             .image img {
-                width: 150px;
+                width: 120px;
             }
 
-            .link img {
-                width: 30px;
-            }
-
-            .content {
+            .nav-links ul {
+                display: none;
                 flex-direction: column;
-                align-items: center;
-                text-align: center;
+                width: 100%;
             }
 
-            ul {
-                justify-content: center;
+            .nav-links.active ul {
+                display: flex;
             }
 
-            li {
-                padding: 15px;
-                font-size: 18px;
+            .menu {
+                display: flex;
+            }
+
+            .nav {
+                flex-direction: column;
             }
         }
 
         @media only screen and (max-width: 480px) {
             body {
-                padding-left: 20px;
-                padding-top: 10px;
+                padding: 20px;
             }
 
             h1 {
@@ -179,7 +224,7 @@
             }
 
             h2 {
-                font-size: 18px;
+                font-size: 20px;
             }
 
             .image img {
@@ -187,12 +232,12 @@
             }
 
             .link img {
-                width: 25px;
+                width: 30px;
             }
 
             li {
+                font-size: 18px;
                 padding: 10px;
-                font-size: 16px;
             }
         }
     </style>
@@ -211,17 +256,27 @@
         </div>
     </div>
 
+    <!-- Hamburger Menu -->
+    <div class="menu" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Navigation Links -->
     <div class="nav">
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li><a href="project.html">Project</a></li>
-            <li><a href="skill.html">Skill</a></li>
-            <li><a href="praveen resume.pdf">Resume</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <div class="nav-links">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="skill.html">Skill</a></li>
+                <li><a href="praveen resume.pdf">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
     </div>
 
     <div class="link">
@@ -229,6 +284,13 @@
         <a href="https://github.com/Praveenp2508"><img src="github.svg" alt="GitHub Profile"></a>
         <a href="mailto:praveenvj2508@gmail.com"><img src="google.svg" alt="Send Email"></a>
     </div>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 
 </html>
