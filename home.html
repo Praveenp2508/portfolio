@@ -1,104 +1,186 @@
 <html>
     <head>
         <style>
-            body{padding-left: 200px;
-            padding-top: 80px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);}
-            h1{font-size: 90px;
-            font-weight: 100;
-            font-family:'Poppins',sans-serif;}
+            body {
+                padding-left: 200px;
+                padding-top: 80px;
+                background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+                font-family: 'Poppins', sans-serif;
+                margin: 0;
+            }
 
-            h2{font-size: 40px;
-            font-family:'Times New Roman', Times, serif;}
+            h1 {
+                font-size: 90px;
+                font-weight: 100;
+                font-family: 'Poppins', sans-serif;
+            }
 
-            ul{list-style-type: none;
-            display: flex;}
-            
-            li{padding: 30px;
-            font-size: 20px;
-            font-family: 'Poppins',sans-serif;}
+            h2 {
+                font-size: 40px;
+                font-family: 'Times New Roman', Times, serif;
+            }
 
-            li:hover{color: rgb(15, 16, 16); border-radius: 50px; transform: scale(1.5); transition: 0.5s;}
+            ul {
+                list-style-type: none;
+                display: flex;
+                padding: 0;
+            }
 
-            li a{text-decoration: none;
-            color: black;}
+            li {
+                padding: 30px;
+                font-size: 20px;
+                font-family: 'Poppins', sans-serif;
+            }
 
-            li:hover a{color: rgb(9, 9, 9);}
+            li:hover {
+                color: rgb(15, 16, 16);
+                border-radius: 50px;
+                transform: scale(1.5);
+                transition: 0.5s;
+            }
 
-            .content img{width: 200px;
-            border-radius: 30%; }
-            .content{display: flex;
-            justify-content: space-between;}
-            .image{margin: 50px;
-            margin-right: 300px;}
+            li a {
+                text-decoration: none;
+                color: black;
+            }
 
-            .link{padding: 20px;}
-            .link a{padding: 20px;}
-            .link img:hover{ background-color: aqua; transform: scale3d(1.5,1.5,3); transition: 0.5s;}
+            li:hover a {
+                color: rgb(9, 9, 9);
+            }
+
+            .content img {
+                width: 200px;
+                border-radius: 30%;
+            }
+
+            .content {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .image {
+                margin: 50px;
+                margin-right: 300px;
+            }
+
+            .link {
+                padding: 20px;
+            }
+
+            .link a {
+                padding: 20px;
+            }
+
+            .link img {
+                width: 30px;
+                border-radius: 50px;
+                transition: 0.3s;
+            }
+
+            .link img:hover {
+                background-color: aqua;
+                transform: scale(1.2);
+                transition: 0.3s;
+            }
+
             .typewriter h2 {
-            font-family:'Courier New', Courier, monospace;
-            font-size: 30px;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: .15em solid black;
-            -webkit-animation: typing 2s steps(26, end), blink-caret 1s step-end infinite;
-            -webkit-animation-delay: 0s;
-            -webkit-animation-fill-mode: both;
-            -moz-animation: typing 2s steps(26, end), blink-caret 1s step-end infinite;
-            -moz-animation-delay: 3s;}
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 30px;
+                white-space: nowrap;
+                overflow: hidden;
+                border-right: .15em solid black;
+                animation: typing 2s steps(26, end), blink-caret 1s step-end infinite;
+            }
 
-@keyframes typing {
-  from {
-    width: 0
-  }
-  to {
-    width: 70%;
-  }
-}
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent
-  }
-  50% {
-    border-color: #f7a40b;
-  }
-}
-        
-    </style>
+            @keyframes typing {
+                from {
+                    width: 0
+                }
+                to {
+                    width: 70%;
+                }
+            }
 
+            @keyframes blink-caret {
+                from, to {
+                    border-color: transparent
+                }
+                50% {
+                    border-color: #f7a40b;
+                }
+            }
+
+            .nav {
+                background: radial-gradient(circle at 10% 20%, rgb(166, 226, 229) 0%, rgb(198, 232, 221) 100.2%);
+                width: 1100px;
+            }
+
+            @media only screen and (max-width: 600px) {
+                body {
+                    padding-left: 50px;
+                    padding-top: 20px;
+                }
+
+                h1 {
+                    font-size: 50px;
+                }
+
+                h2 {
+                    font-size: 20px;
+                }
+
+                .image img {
+                    width: 100px;
+                }
+
+                .nav {
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                }
+
+                ul {
+                    display: block;
+                }
+
+                li {
+                    display: inline-block;
+                    padding: 10px;
+                }
+            }
+        </style>
     </head>
-<body>
-    <div class="content">
-        <div class="head">
-            <h1>Praveen P</h1>
-            <div class="typewriter">
-                <h2>I'm a Developer</h2>
-              </div>
-            
-        </div>
-        <div class="image">
-            <img src="profile.JPG">
-        </div>
-    </div>
 
-    <div class="nav" style="background: radial-gradient(circle at 10% 20%, rgb(166, 226, 229) 0%, rgb(198, 232, 221) 100.2%); width: 1100px;">
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="education.html">Education</a></li>
-            <li><a href="experience.html">Experience</a></li>
-            <li><a href="project.html">Project</a></li>
-            <li><a href="skill.html">Skill</a></li>
-            <li><a href="praveen resume.pdf"> Resume </a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-    <div class="link">
-        <a href="https://www.linkedin.com/in/praveen-p-288b052a7/"><img src="linkedin.svg" style=" width: 30px; border-radius: 50px;"></a>
-        <a href="https://github.com/Praveenp2508"><img src="github.svg" alt="" style=" width: 30px; border-radius: 50px;"></a>
-        <a href="mailto:praveenvj2508@gmail.com"><img src="google.svg" alt="" style=" width: 30px; border-radius: 50px;"></a>
+    <body>
+        <div class="content">
+            <div class="head">
+                <h1>Praveen P</h1>
+                <div class="typewriter">
+                    <h2>I'm a Developer</h2>
+                </div>
+            </div>
+            <div class="image">
+                <img src="profile.JPG" alt="Profile picture of Praveen P">
+            </div>
+        </div>
 
-        
-    </div>
-</body>
+        <div class="nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="skill.html">Skill</a></li>
+                <li><a href="praveen resume.pdf">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="link">
+            <a href="https://www.linkedin.com/in/praveen-p-288b052a7/"><img src="linkedin.svg" alt="LinkedIn Profile"></a>
+            <a href="https://github.com/Praveenp2508"><img src="github.svg" alt="GitHub Profile"></a>
+            <a href="mailto:praveenvj2508@gmail.com"><img src="google.svg" alt="Send Email"></a>
+        </div>
+    </body>
 </html>
