@@ -1,67 +1,160 @@
-<html>
-    <head>
-        <style>
-            body{padding: 10px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praveen P</title>
+    <style>
+        body {
+            padding: 10px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-            .nav{display: flex;
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
             padding: 20px;
-            justify-content: space-evenly;
+            justify-content: space-between;
             background: radial-gradient(circle at 10% 20%, rgb(166, 226, 229) 0%, rgb(198, 232, 221) 100.2%);
             position: -webkit-sticky;
             position: sticky;
-            top: 1;}
+            top: 0;
+            z-index: 1000;
+        }
 
-            h3{font-size: 30px;
+        .nav .name h3 {
+            margin: 0;
+            font-size: 24px;
             font-weight: 700;
-            font-family:'Poppins',sans-serif;}
+            font-family: 'Poppins', sans-serif;
+        }
 
-            .navcontent ul{list-style-type: none;
-            display: flex;}
-            
-            .navcontent li{padding: 20px;
-            font-size: 20px;
-            font-family: 'Poppins',sans-serif;}
+        .navcontent ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+        }
 
-            .navcontent li:hover{color: aqua; background-color: black; border-radius: 50px;}
+        .navcontent li {
+            padding: 10px;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+        }
 
-            .navcontent li a{text-decoration: none;
-            color: black;}
+        .navcontent li:hover {
+            color: aqua;
+            background-color: black;
+            border-radius: 50px;
+        }
 
-            .navcontent li:hover a{color: aqua;}
+        .navcontent li a {
+            text-decoration: none;
+            color: black;
+        }
 
-            .about{justify-content: center;
-            padding-right: 200px;
-            padding-left: 200px;
-            text-align: justify;}
+        .navcontent li:hover a {
+            color: aqua;
+        }
 
-            .content{padding: 20px;}
+        .about {
+            text-align: center;
+            padding: 20px;
+        }
 
-            .content p{font-family: Georgia, 'Times New Roman', Times, serif;
-            font-size: 20px;
-            padding: 50px;
+        .content {
+            padding: 20px;
+        }
+
+        .content p {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 18px;
+            padding: 20px;
             box-shadow: 1px 2px 8px;
-            border-radius: 10px;}
+            border-radius: 10px;
+        }
 
-            .contact ul{list-style-type: none;
-            text-align: justify;
-            padding-top: 30px;
-            padding-right: 10px;
+        .contact ul {
+            list-style-type: none;
+            padding: 0;
             font-family: "Open Sans", sans-serif;
-            font-size: 18px;}
+            font-size: 16px;
+        }
 
-            .row{display: flex;
-            justify-content: space-evenly;}
-            .icon-box{background: radial-gradient(circle at 10% 20%, rgb(166, 226, 229) 0%, rgb(198, 232, 221) 100.2%);}
+        .contact li {
+            padding: 10px 0;
+        }
 
-            .icon-box h3{font-size: 20px;
-            padding: 30px;}
+        .contact img {
+            vertical-align: middle;
+            margin-right: 8px;
+        }
 
-            .icon-box:hover{background:radial-gradient( circle at 10% 20%,rgb(198, 232, 221) 0%, rgb(166, 226, 229) 100.6%);}
-            
-            
-        </style>
-    </head>
+        .icon-box {
+            background: radial-gradient(circle at 10% 20%, rgb(166, 226, 229) 0%, rgb(198, 232, 221) 100.2%);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .icon-box h3 {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .icon-box:hover {
+            background: radial-gradient(circle at 10% 20%, rgb(198, 232, 221) 0%, rgb(166, 226, 229) 100.6%);
+        }
+
+        @media (max-width: 768px) {
+            .navcontent li {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .content p {
+                font-size: 16px;
+                padding: 10px;
+            }
+
+            .contact ul {
+                font-size: 14px;
+            }
+
+            .icon-box h3 {
+                font-size: 16px;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navcontent {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navcontent li {
+                padding: 10px 0;
+            }
+
+            .contact ul {
+                font-size: 12px;
+            }
+
+            .content p {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .icon-box h3 {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
 <body>
     <div class="nav">
         <div class="name">
@@ -70,14 +163,14 @@
 
         <div class="navcontent">
             <ul>
-              <li><a href="home.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="education.html">Education</a></li>
-              <li><a href="experience.html">Experience</a></li>
-              <li><a href="project.html">Project</a></li>
-              <li><a href="skill.html">Skill</a></li>
-              <li><a href="praveen resume.pdf"> Resume </a></li>
-              <li><a href="contact.html">Contact</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="skill.html">Skill</a></li>
+                <li><a href="praveen resume.pdf">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </div>
@@ -88,40 +181,39 @@
         </div>
         <div class="contact">
             <ul>
-                <li><strong> <img src="geo-alt.svg" alt=""> City : </strong>Chennai,Tamilnadu</li><br><br>
-                <li><strong> <img src="telephone.svg" alt=""> Phone : </strong>9677659973</li><br><br>
-                <li><strong> <img src="envelope.svg" alt=""> Email : </strong>praveenvj2508@gmail.com</li><br><br>
+                <li><strong><img src="geo-alt.svg" alt=""> City: </strong>Chennai, Tamilnadu</li>
+                <li><strong><img src="telephone.svg" alt=""> Phone: </strong>9677659973</li>
+                <li><strong><img src="envelope.svg" alt=""> Email: </strong>praveenvj2508@gmail.com</li>
             </ul>
         </div>
     </div>
 
     <div class="interests container">
-
         <div class="section-title">
-          <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; padding-left: 50px;">Interests___</h2>
+            <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; padding-left: 20px;">Interests___</h2>
         </div>
   
         <div class="row">
-          <div class="col-lg-3 col-md-4">
-            <div class="icon-box">
-              <h3>Software Development</h3>
+            <div class="col-lg-3 col-md-4">
+                <div class="icon-box">
+                    <h3>Software Development</h3>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div class="icon-box">
-              <h3>Web Development</h3>
+            <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+                <div class="icon-box">
+                    <h3>Web Development</h3>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div class="icon-box">
-              <h3>Software Engineering</h3>
+            <div class="col-lg-3 col-md-4 mt-4 mt-md-0">
+                <div class="icon-box">
+                    <h3>Software Engineering</h3>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
-            <div class="icon-box">
-              <h3>Machine Learning</h3>
+            <div class="col-lg-3 col-md-4 mt-4 mt-lg-0">
+                <div class="icon-box">
+                    <h3>Machine Learning</h3>
+                </div>
             </div>
-          </div>
         </div>
     </div>
 </body>
